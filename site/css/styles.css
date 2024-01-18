@@ -1,0 +1,165 @@
+@font-face {
+    font-family: Rubik;
+    src: url("img/Rubik-medium");
+}
+body {
+    margin: 0;
+    font-family: Rubik;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(2, 2, 2);
+    align-items: center;
+    padding: 10px;
+    color: white;
+    border-radius: -150px;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 80px;
+    margin-right: 10px;
+}
+
+.nav-links a {
+    position: relative;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin-left: 20px;
+    overflow: hidden;
+}
+
+.nav-links a::before,
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: rgb(254, 1, 1);
+    transition: width 0.3s ease; /* Transition pour l'effet d'expansion */
+}
+
+.nav-links a::before {
+    top: 0;
+    left: 0;
+}
+
+.nav-links a::after {
+    bottom: 0;
+    left: 0;
+}
+
+.nav-links a:hover::before,
+.nav-links a:hover::after {
+    width: 100%; /* Expansion complÃ¨te au survol */
+}
+
+.nav-links a:hover {
+    color: rgb(252, 0, 0);
+    /*Changementdecouleurausurvol*/transition: color 0.3s ease;
+     /* Transition pour le changement de couleur */
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -ms-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+}
+.main-content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+p {
+    line-height: 1.6;
+}
+
+
+
+footer {
+    margin-top: 5%;
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    bottom: 0;
+}
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+
+.comment-form {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+}
+
+form {
+    display: grid;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+textarea,
+input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #000000;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+}
+
+input[type="submit"]:hover {
+    background-color: #ff0000;
+}
+
+        #cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px;
+            background-color: #ff0000;
+            text-align: center;
+            display: none;
+        }
+
+        #cookie-banner button:hover{
+            padding: 5px 10px;
+            cursor: pointer;
+        }
