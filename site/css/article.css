@@ -1,4 +1,6 @@
-
+body{
+    overflow-x: hidden;
+}
 #eximg{
     height: 700px;
 
