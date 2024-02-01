@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -14,8 +15,10 @@
       <img src="img/logo2.png" alt="Logo">
     </div>
     <div class="nav-links">
-      <a href="accueil.php">Accueil</a>
+      <a href="dashboard.php">Accueil</a>
       <a href="categories.php">Catégories</a>
+      <a href="newarticle.php">Ecrire un article</a>
+      <a href="newcategorie.php">Ajouter une catégorie</a>
     </div>
   </div>
 </header>

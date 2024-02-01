@@ -5,16 +5,21 @@
 body {
     margin: 0;
     font-family: Rubik;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #eee;
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
-    background-color: rgb(2, 2, 2);
+    background-color: white;
     align-items: center;
     padding: 10px;
-    color: white;
+    color: rgb(2, 2, 2);
     border-radius: -150px;
+    box-shadow: 0 0 10px #3C91E6;
 }
 
 
@@ -30,7 +35,7 @@ body {
 
 .nav-links a {
     position: relative;
-    color: rgb(255, 255, 255);
+    color: rgb(2, 2, 2);
     text-decoration: none;
     margin-left: 20px;
     overflow: hidden;
@@ -42,7 +47,7 @@ body {
     position: absolute;
     width: 0;
     height: 2px;
-    background-color: rgb(254, 1, 1);
+    background-color: #3C91E6;
     transition: width 0.3s ease; /* Transition pour l'effet d'expansion */
 }
 
@@ -62,7 +67,7 @@ body {
 }
 
 .nav-links a:hover {
-    color: rgb(252, 0, 0);
+    color: #3C91E6;
     /*Changementdecouleurausurvol*/transition: color 0.3s ease;
      /* Transition pour le changement de couleur */
     -webkit-transition: color 0.3s ease;
@@ -89,15 +94,14 @@ p {
 
 
 footer {
-    margin-top: auto;
+    margin-top:  auto;
     background-color: #f8f9fa;
     padding: 20px;
     text-align: center;
-    background-color: rgb(0, 0, 0);
-    bottom: 0;
+    box-shadow: 0 0 10px #3C91E6;
 }
 footer a {
-    color: #ffffff;
+    color: rgb(0, 0, 0);
     text-decoration: none;
 }
 footer a:hover {
@@ -136,7 +140,7 @@ input {
 }
 
 input[type="submit"] {
-    background-color: #000000;
+    background-color: #3C91E6;
     color: #fff;
     cursor: pointer;
     padding: 10px;
@@ -144,22 +148,69 @@ input[type="submit"] {
     border-radius: 4px;
 }
 
-input[type="submit"]:hover {
-    background-color: #ff0000;
+#cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: #3C91E6;
+    text-align: center;
+    display: none;
 }
-
-        #cookie-banner {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            padding: 10px;
-            background-color: #ff0000;
-            text-align: center;
-            display: none;
-        }
-
-        #cookie-banner button:hover{
-            padding: 5px 10px;
-            cursor: pointer;
-        }
+#cookie-banner button:hover{
+    padding: 5px 10px;
+    cursor: pointer;
+}
+ul {
+    list-style: none; /* supprime les puces par défaut */
+    padding: 0; /* supprime l'espacement intérieur par défaut */
+    margin: 0; /* supprime l'espacement extérieur par défaut */
+    display: flex; /* affiche les éléments de la liste sous forme de flexbox */
+    flex-direction: column; /* les éléments sont empilés verticalement */
+    gap: 10px; /* ajoute de l'espacement entre les éléments */
+    width: 100%; /* la largeur de la liste est définie sur 100% de la largeur de son conteneur */
+    max-width: 600px; /* la largeur maximale de la liste est définie à 600px */
+    margin: 0 auto; /* centrer la liste horizontalement */
+  }
+  
+  ul li {
+    background-color: rgb(255, 255, 255); /* couleur de fond gris clair */
+    padding: 10px; /* ajoute de l'espacement intérieur */
+    border-radius: 5px; /* arrondit les coins */
+    transition: transform 0.3s ease; /* ajoute une animation de transition lors du survol */
+  }
+  
+  ul li:hover {
+    
+    box-shadow: 0 0 10px #3C91E6; /* ajoute une ombre lors du survol */
+  }
+  
+  ul a {
+    text-decoration: none; /* supprime le soulignement des liens */
+    color: #333; /* couleur du texte noire */
+    transition: color 0.5s ease; /* ajoute une animation de transition lors du survol */
+  }
+  
+  ul a:hover {
+    color: #3C91E6; /* couleur du texte rouge lors du survol */
+  }
+  .flotte:hover{
+    transform: translateY(-5px);
+    
+  }
+  .retour{
+    background-color: gray;
+    transition: transform 0.3s ease;
+  }
+  .retour a{
+    color: white;
+  }
+  .retour:hover{
+    background-color: white;
+    box-shadow: 0 0 10px red;
+    transform: translateY(-5px); 
+  }
+  .retour a:hover{
+    color: black;
+  }

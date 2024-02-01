@@ -8,6 +8,7 @@ if (isset($_GET['id']) AND !empty($_GET['id'])){
 
     if($article->rowCount() == 1){
         $article = $article->fetch();
+        $id = $article['id'];
         $titre = $article['titre'];
         $contenu = $article['contenu'];
     } else {
@@ -26,8 +27,14 @@ if (isset($_GET['id']) AND !empty($_GET['id'])){
     <title><?= $titre ?></title>
 </head>
 <link rel="stylesheet" href="css/article.css">
-<h1><?= $titre ?></h1>
-<p><?= $contenu ?></p>
+
+<center>
+    <h1><?= $titre ?></h1>
+    <img src="img/<?= $id ?>.jpg" width="600px"/>
+    <p><?= $contenu ?></p>
+</center>
+
+
 
     
     <div data-aos="fade-up">

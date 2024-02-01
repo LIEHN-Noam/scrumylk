@@ -20,11 +20,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $resultat = $requete->fetch(PDO::FETCH_ASSOC);
 
         if ($resultat) {
-            echo "Connexion réussie!";
-            header("Location: accueil.php");
+            header("Location: dashboard.php");
             // Vous pouvez rediriger l'utilisateur ou effectuer d'autres actions ici
         } else {
-            echo "Identifiants incorrects.";
+            $message= "Identifiant ou mot de passe incorrect";
         }
     } catch (PDOException $error) {
         echo '<h1 align="center">Impossible de se connecter</h1>';
@@ -59,12 +58,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <form method="POST" action="">
                         <div class="form-group">
                             <label for="email">Adresse e-mail</label>
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Entrez votre adresse e-mail">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Entrez votre adresse e-mail" required>
                         </div>
                         <div class="form-group">
                             <label for="password">Mot de passe</label>
-                            <input type="password" class="form-control" id="password" name="password" placeholder="Entrez votre mot de passe">
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Entrez votre mot de passe" required>
                         </div>
+                        <?php
+                    if (isset($message)){
+                        echo '<p style="color:red;">'.$message.'</p>';
+                    }
+                    ?>  
                         <br>
                         <center>
                             <button type="submit" class="btn btn-primary btn-block">Connexion</button>

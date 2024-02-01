@@ -21,22 +21,10 @@ if(isset($_POST['categorie_titre'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ajout d'une catégorie</title>    
-    <style>
-        body{
-            overflow-x : hidden;
-        }
-        #form{
-            padding-bottom: 50%;
-            margin-left: 30%;
-            margin-right: 30%
-        }
-        .form-fill{
-            margin-bottom: 40px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/form.css">
 </head>
 <body>
-    <div id="form">
+    <div class="form">
         <h1>Ajouter une catégorie</h1>
         <form action="newcategorie.php" method="post" enctype="multipart/form-data">
             <div class="form-fill">

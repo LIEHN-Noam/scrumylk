@@ -12,7 +12,9 @@ try {
         $username = $_POST['username'];
         $surname = $_POST['surname'];
         $email = $_POST['email'];
+        $user = $surname;
         $password = $_POST['password'];
+        $psw = $password;
 
         // Utilisez des préparations de requêtes pour éviter les attaques par injection SQL
         $requete = $bdd->prepare("INSERT INTO admins (nom, prenom, email, password) VALUES (:nom, :prenom, :email, :password)");
@@ -55,19 +57,19 @@ try {
                     <form method="POST">
                         <div class="form-group">
                             <label for="username">Nom</label>
-                            <input type="text" class="form-control" id="username" name="username" placeholder="Entrez votre nom">
+                            <input type="text" class="form-control" id="username" name="username" placeholder="Entrez votre nom" required>
                         </div>
                         <div class="form-group">
                             <label for="surname">Prénom</label>
-                            <input type="text" class="form-control" id="surname" name="surname" placeholder="Entrez votre prénom">
+                            <input type="text" class="form-control" id="surname" name="surname" placeholder="Entrez votre prénom" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Adresse e-mail</label>
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Entrez votre adresse e-mail">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Entrez votre adresse e-mail" required>
                         </div>
                         <div class="form-group">
                             <label for="password">Mot de passe</label>
-                            <input type="password" class="form-control" id="password" name="password" placeholder="Entrez votre mot de passe">
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Entrez votre mot de passe" required>
                         </div>
                         <button name="inscription" type="submit" class="btn btn-primary btn-block">S'inscrire</button>
                     </form>

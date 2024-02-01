@@ -1,5 +1,6 @@
-<footer><br>
-  <p style="color: white;">Copyright © 2024. Tous droits réservés.</p>
+<footer>
+  <link rel="stylesheet" href="css/styles.css">
+  <p>Copyright © 2024. Tous droits réservés.</p>
   <p>
       <a href="#">Contactez-nous</a>
       |

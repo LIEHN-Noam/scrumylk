@@ -1,14 +1,18 @@
 body{
     overflow-x: hidden;
+    text-align: center;
 }
 #eximg{
     height: 700px;
 
 margin-top: 5%;
 }
- #art{
- 
-   max-width: 950px;
+.container-text-align {
+    text-align: center;
+}
+
+.container-text-align img {
+    display: inline-block;
 }
 #retour{
 color: red;
