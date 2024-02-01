@@ -23,6 +23,7 @@ try {
 
         if ($requete->execute()) {
             echo "Inscription réussie!";
+            header("Location: index.php");
             // Vous pouvez rediriger l'utilisateur ou effectuer d'autres actions ici
         } else {
             echo "Erreur lors de l'inscription.";
@@ -72,7 +73,7 @@ try {
                     </form>
                 </div>
                 <center>
-                    <p class="mt-3">Vous avez un compte? <a href="connexion.php">Connectez-vous ici</a>.</p>
+                    <p class="mt-3">Vous avez un compte? <a href="index.php">Connectez-vous ici</a>.</p>
                 </center>
             </div>
         </div>

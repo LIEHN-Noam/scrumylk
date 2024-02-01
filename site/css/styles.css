@@ -1,6 +1,6 @@
 @font-face {
     font-family: Rubik;
-    src: url("img/Rubik-medium");
+    src: url("img/Rubik-medium.ttf");
 }
 body {
     margin: 0;
@@ -24,7 +24,7 @@ body {
 }
 
 .logo img {
-    width: 80px;
+    width: 90px;
     margin-right: 10px;
 }
 
@@ -89,7 +89,7 @@ p {
 
 
 footer {
-    margin-top: 5%;
+    margin-top: auto;
     background-color: #f8f9fa;
     padding: 20px;
     text-align: center;

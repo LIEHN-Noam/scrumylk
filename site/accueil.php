@@ -1,36 +1,24 @@
-<?php 
+<?php require 'header.php';
 $bdd = new PDO("mysql:host=localhost;dbname=creatix;charset=utf8", "root", ""); 
+$articles = $bdd->query('SELECT * FROM articles  ORDER BY date_public DESC');?>
 
-if (isset($_GET['id']) AND !empty($_GET['id'])){
-    $get_id = htmlspecialchars($_GET['id']);
-    $article = $bdd->prepare('SELECT * FROM articles WHERE id = ?');
-    $article->execute(array($get_id));
-
-    if($article->rowCount() == 1){
-        $article = $article->fetch();
-        $titre = $article['titre'];
-        $contenu = $article['contenu'];
-    } else {
-        die('Cet article n\'existe pas');
-    }
-}else{
-    die('Erreur');
-}
-?>
-<?php require 'header.php'; ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= $titre ?></title>
+    <title>Accueil</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<link rel="stylesheet" href="css/article.css">
-<h1><?= $titre ?></h1>
-<p><?= $contenu ?></p>
-
-    
-    <div data-aos="fade-up">
+<body>
+<ul>
+  <?php while($a =$articles->fetch()) { ?>
+    <li>
+      <a href="article.php?id=<?= $a['id'] ?>"><?= $a['titre'] ?></a>
+    </li> <?php }  ?>
+</ul>
+<div data-aos="fade-up">
          <div class="comment-form">
   <h2>Laissez un commentaire</h2>
   
@@ -48,11 +36,12 @@ if (isset($_GET['id']) AND !empty($_GET['id'])){
   </form>
 </div>
     </div>
-   
+<script src="script.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
-<?php require 'footer.php'; ?>
+  <?php require 'footer.php';?>
 </body>
 </html>
+
