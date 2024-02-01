@@ -19,7 +19,6 @@
       <ul>
         <li>
           <a href="#"><i class="ion-bag"></i> <span>Shop</span></a>
-          
         </li>
         <li>
           <a href="#"><i class="ion-ios-settings"></i> <span class="">Controls</span></a>
